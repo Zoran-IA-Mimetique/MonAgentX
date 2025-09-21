@@ -1,0 +1,33 @@
+name: Publier le site et le SBOM
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v3
+
+      - name: Installer Syft pour le SBOM
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install syft
+          syft . -o cyclonedx-json > sbom.json
+
+      - name: Configurer Pages GitHub
+        uses: actions/configure-pages@v3
+
+      - name: Déployer sur GitHub Pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: .
+
+      - name: Publier le site
+        uses: actions/deploy-pages@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
