@@ -1,0 +1,13 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "type": "application",
+      "name": "MonAgentX",
+      "version": "1.0.0"
+    }
+  },
+  "components": []
+}

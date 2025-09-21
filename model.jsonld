@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "SoftwareApplication",
+  "name": "MonAgentX",
+  "url": "https://monagentx.example",
+  "description": "Agent IA orienté orchestration de pipelines (ingest→RAG→planner→exec).",
+  "applicationCategory": "ArtificialIntelligence",
+  "author": {
+    "@type": "Person",
+    "name": "Zoran 🦋aSiM"
+  },
+  "softwareVersion": "1.0.0",
+  "license": "https://opensource.org/licenses/MIT",
+  "featureList": [
+    "Pipeline orchestration",
+    "RAG integration",
+    "SBOM + C2PA compliant"
+  ],
+  "operatingSystem": "Cloud / Cross-platform",
+  "releaseNotes": "https://monagentx.example/releases",
+  "screenshot": "https://monagentx.example/screenshot.png"
+}
