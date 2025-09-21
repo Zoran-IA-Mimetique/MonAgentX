@@ -1,0 +1,28 @@
+openapi: 3.0.3
+info:
+  title: MonAgentX API
+  version: "1.0.0"
+  description: API de démonstration pour MonAgentX.
+paths:
+  /v1/infer:
+    post:
+      summary: Demande d'inférence
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                prompt:
+                  type: string
+      responses:
+        '200':
+          description: Réponse de l'agent
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: string

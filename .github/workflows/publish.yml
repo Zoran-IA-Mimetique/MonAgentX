@@ -25,7 +25,7 @@ jobs:
       - name: Déployer sur GitHub Pages
         uses: actions/upload-pages-artifact@v1
         with:
-          path: .
+          path: ./docs
 
       - name: Publier le site
         uses: actions/deploy-pages@v1
